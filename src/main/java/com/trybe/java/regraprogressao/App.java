@@ -30,7 +30,7 @@ public class App {
     }
 
     if (somaPessos != 100) {
-      System.out.println("A soma dos pesos deve ser igual a 100");
+      System.out.println("A soma dos pesos é diferente de 100!");
       System.exit(0);
     }
 
