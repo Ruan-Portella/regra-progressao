@@ -34,7 +34,6 @@ public class App {
 
     if (somaPessos != 100) {
       System.out.println("A soma dos pesos é diferente de 100!");
-      System.exit(0);
     } else if (resultado >= 85.0) {
       System.out.printf("Parabéns! Você alcançou %.1f%%! E temos o prazer" 
             + 
