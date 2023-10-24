@@ -20,7 +20,7 @@ public class App {
     for (int i = 0; i < quantidadeAtividades; i++) {
       System.out.println("Digite o nome da atividade " + (i + 1) + ":");
       nomesAtividades[i] = scanner.nextLine();
-      System.out.println("Digite a nota da atividade " + (i + 1) + ":");
+      System.out.println("Digite a nota obtida para " + (nomesAtividades[i]) + ":");
       notasAtividades[i] = scanner.nextDouble();
       System.out.println("Digite o peso da atividade " + (i + 1) + ":");
       pesosAtividades[i] = scanner.nextDouble();
