@@ -21,12 +21,12 @@ public class App {
     for (int i = 0; i < quantidadeAtividades; i++) {
       System.out.println("Digite o nome da atividade " + (i + 1) + ":");
       nomesAtividades[i] = scanner.nextLine();
-      System.out.println("Digite a nota obtida para " + (nomesAtividades[i]) + ":");
-      notasAtividades[i] = scanner.nextDouble();
       System.out.println("Digite o peso da atividade " + (i + 1) + ":");
       pesosAtividades[i] = scanner.nextDouble();
+      System.out.println("Digite a nota obtida para " + (nomesAtividades[i]) + ":");
+      notasAtividades[i] = scanner.nextDouble();
       somaPessos += pesosAtividades[i];
-      notaFinal += (notasAtividades[i] * pesosAtividades[i]) / 100;
+      notaFinal += (notasAtividades[i] * pesosAtividades[i]) / 100.0;
       scanner.nextLine();
     }
 
@@ -34,17 +34,24 @@ public class App {
 
     if (somaPessos != 100) {
       System.out.println("A soma dos pesos é diferente de 100!");
-    } else if (resultado >= 85.0) {
-      System.out.printf("Parabéns! Você alcançou %.1f%%! E temos o prazer" 
-            + 
-          "de informar que você obteve aprovação!", resultado);
+    }
+
+    if (resultado >= 85.0) {
+      System.out.printf("Parabéns! Você alcançou %.1f%%! E temos o prazer " 
+              + 
+          "de informar que você obteve aprovação!%n", 
+          resultado
+      );
     } else {
       System.out.printf("Lamentamos informar que, com base na sua pontuação" 
               + 
-            "alcançada neste período, %.1f%%, você não atingiu a pontuação" 
-              + 
-            "mínima necessária para sua aprovação", resultado);
+            "alcançada neste período, %.1f%%, você não atingiu a pontuação " 
+              +
+            "mínima necessária para sua aprovação.%n", 
+            resultado
+      );
     }
+
 
     scanner.close(); 
 
