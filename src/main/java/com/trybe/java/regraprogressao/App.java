@@ -1,5 +1,6 @@
 package com.trybe.java.regraprogressao;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class App {
@@ -37,13 +38,13 @@ public class App {
     }
 
     if (resultado >= 85.0) {
-      System.out.printf("Parabéns! Você alcançou %.1f%%! E temos o prazer " 
+      System.out.printf(Locale.US, "Parabéns! Você alcançou %.1f%%! E temos o prazer " 
               + 
           "de informar que você obteve aprovação!%n", 
           resultado
       );
     } else {
-      System.out.printf("Lamentamos informar que, com base na sua pontuação" 
+      System.out.printf(Locale.US, "Lamentamos informar que, com base na sua pontuação" 
               + 
             "alcançada neste período, %.1f%%, você não atingiu a pontuação " 
               +
