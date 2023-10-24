@@ -16,6 +16,7 @@ public class App {
     double[] pesosAtividades = new double[quantidadeAtividades];
     double somaPessos = 0;
     double notaFinal = 0;
+    double resultado = 0;
 
     for (int i = 0; i < quantidadeAtividades; i++) {
       System.out.println("Digite o nome da atividade " + (i + 1) + ":");
@@ -29,12 +30,22 @@ public class App {
       scanner.nextLine();
     }
 
+    resultado = (notaFinal * 100) / somaPessos;
+
     if (somaPessos != 100) {
       System.out.println("A soma dos pesos é diferente de 100!");
       System.exit(0);
+    } else if (resultado >= 85.0) {
+      System.out.printf("Parabéns! Você alcançou %.1f%%! E temos o prazer" 
+            + 
+          "de informar que você obteve aprovação!", resultado);
+    } else {
+      System.out.printf("Lamentamos informar que, com base na sua pontuação" 
+              + 
+            "alcançada neste período, %.1f%%, você não atingiu a pontuação" 
+              + 
+            "mínima necessária para sua aprovação", resultado);
     }
-
-    System.out.println("A nota final é: " + notaFinal);
 
     scanner.close(); 
 
