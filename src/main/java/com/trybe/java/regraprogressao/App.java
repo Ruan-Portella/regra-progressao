@@ -31,7 +31,7 @@ public class App {
 
     if (somaPessos != 100) {
       System.out.println("A soma dos pesos deve ser igual a 100");
-      System.exit(1);
+      System.exit(0);
     }
 
     System.out.println("A nota final é: " + notaFinal);
